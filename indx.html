@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="layer bg-dark bg-opacity-75 my-auto">
+        <div class="border-bottom border-1 border-light w-25 mx-5"><img src="images/John_Deere_logo.webp"
+                class="w-100 p-4" alt="John_Deere_logo">
+        </div>
+        <h4 class="mx-5 text-light mt-3">Here you can find information about the devices we are selling</h4>
+        <h4 class="mx-5 text-light mt-1">you can also Update or Delete it.</h4>
+        <div class="p4 mx-5 mt-5 text-white fs-6">
+            <p><span class="text-success mx-1"><i class="fa-solid fa-location-dot"></i></span> <span>329
+                    WASHINGTON ST BOSTON, MA
+                    02108</span></p>
+            <p><span class="text-success mx-1"><i class="fa-solid fa-phone"></i></span> <span>(617)
+                    557-0089</span></p>
+            <p><span class="text-success mx-1"><i class="fa-solid fa-envelope"></i></span>
+                <span>contact@example.com</span>
+            </p>
+        </div>
+    </div>
+    <div class="border-2 border-top border-light">
+        <div class="p-5 shadow w-100 bg-success bg-opacity-75 mx-auto rounded-2">
+            <div class="w-100 text-center"><img src="images/889.png" class="w-25" alt="John_Deere_logo"></div>
+            <label class="my-2 text-white" for="pName">Product <span class="text-warning">Name</span></label>
+            <input type="text" class="form-control" id="pName">
+            <label class="my-2 text-white" for="pPrice">Product <span class="text-warning">Price</span></label>
+            <input type="text" class="form-control" id="pPrice">
+            <label class="my-2 text-white" for="pCategory">Product <span class="text-warning">Category</span></label>
+            <input type="text" class="form-control" id="pCategory">
+            <label class="my-2 text-white" for="pDesc">Product <span class="text-warning">Description</span></label>
+            <input type="text" class="form-control" id="pDesc">
+            <button id="btnAdd" onclick="addProduct()"
+                class="btn btn-lg d-block btn-outline-dark mx-auto w-25 mt-5">Add
+                Product</button>
+            <button id="btnUpdate" onclick="updateProduct()"
+                class="btn btn-lg d-none btn-warning mx-auto w-25 mt-5">Update</button>
+            <input type="text" oninput="searchProduct(this.value)" placeholder="Search...."
+                class="form-control w-50 mx-auto my-4 border-1 border-dark">
+            <Table class="table text-center table-success table-striped mt-3">
+                <thead>
+                    <th>Number</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </Table>
+        </div>
+    </div>
+    <script src="JS/main.js"></script>
+</body>
+</html>
